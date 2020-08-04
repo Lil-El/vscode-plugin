@@ -6,15 +6,27 @@
   "engines": {
     "vscode": "^1.47.0"
   },
+  "icon": "image/logo.png",
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:demo.helloWorld",
-    "onCommand:demo.sayHello"
-  ],
-  "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "MINO-plugin-demo",
+      "properties": {
+        "Mino插件.yourName": {
+          "type": "string",
+          "default": "guest",
+          "description": "你的名字"
+        },
+        "Mino插件.showTip": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否在每次启动时显示欢迎提示！"
+        }
+      }
+    },
     "commands": [
       {
         "command": "demo.helloWorld",
@@ -26,6 +38,11 @@
       }
     ]
   },
+  "activationEvents": [
+    "onCommand:demo.helloWorld",
+    "onCommand:demo.sayHello"
+  ],
+  "main": "./extension.js",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
