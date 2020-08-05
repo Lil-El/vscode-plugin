@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.47.0"
   },
-  "icon": "image/logo.png",
+  "icon": "image/p-icon.png",
   "categories": [
     "Other"
   ],
@@ -36,7 +36,68 @@
         "command": "demo.sayHello",
         "title": "YXD:say"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "demo.sayHello",
+        "key": "ctrl+f10",
+        "mac": "cmd+f10",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "demo.sayHello",
+          "group": "navigation@1"
+        },
+        {
+          "when": "editorFocus",
+          "command": "demo.helloWorld",
+          "group": "h_commands"
+        },
+        {
+          "when": "editorFocus && resourceLangId == javascript",
+          "command": "demo.helloWorld",
+          "group": "z_commands"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "editorFocus && resourceLangId == javascript",
+          "command": "demo.sayHello",
+          "group": "navigation"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "when": "resourceLangId == javascript",
+          "command": "demo.sayHello",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "demo.getCurrentFilePath",
+          "group": "navigation"
+        },
+        {
+          "command": "demo.openWebview",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "demo.helloWorld",
+          "group": "navigation"
+        },
+        {
+          "command": "demo.sayHello",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "activationEvents": [
     "onCommand:demo.helloWorld",

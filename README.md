@@ -93,7 +93,7 @@
           "group": "navigation"
         }
       ],
-      "editor/title/context": [ // 编辑器标题右键菜单
+      "editor/title/context": [ // tab页标题右键菜单
         {
           "when": "resourceLangId == javascript",
           "command": "extension.demo.testMenuShow",
