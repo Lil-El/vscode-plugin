@@ -53,7 +53,11 @@
       },
       {
         "command": "demo.sayHello",
-        "title": "YXD:say"
+        "title": "YXD:say",
+        icon:{ // 在编辑器右上角的图标
+          light:"./image/b.png",
+          dark:"./image/a.png"
+        }
       }
     ],
     "keybindings": [ // 快捷键绑定
@@ -200,8 +204,6 @@
   npm i -g vsce
   vsce publish
 ```
-
-//TODO:未完待续
 
 [1]: https://www.cnblogs.com/liuxianan/p/vscode-plugin-overview.html
 [2]: https://code.visualstudio.com/api

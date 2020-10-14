@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.47.0"
   },
-  "icon": "image/p-icon.png",
+  "icon": "./image/yxd.png",
   "categories": [
     "Other"
   ],
@@ -34,7 +34,19 @@
       },
       {
         "command": "demo.sayHello",
-        "title": "YXD:say"
+        "title": "YXD:say",
+        "icon": {
+          "dark": "./image/yxd.png",
+          "light": "./image/yxd.png"
+        }
+      },
+      {
+        "command": "demo.getFilePath",
+        "title": "YXD:getFilePath"
+      },
+      {
+        "command": "demo.open",
+        "title": "YXD:open"
       }
     ],
     "keybindings": [
@@ -55,18 +67,24 @@
         {
           "when": "editorFocus",
           "command": "demo.helloWorld",
-          "group": "h_commands"
+          "group": "1_yxd"
         },
         {
           "when": "editorFocus && resourceLangId == javascript",
           "command": "demo.helloWorld",
-          "group": "z_commands"
+          "group": "1_yxd"
+        },
+        {
+          "when": "editorFocus",
+          "command": "demo.open",
+          "group": "1_yxd@1"
         }
       ],
       "editor/title": [
         {
           "when": "editorFocus && resourceLangId == javascript",
           "command": "demo.sayHello",
+          "alt": "demo.helloWorld",
           "group": "navigation"
         }
       ],
@@ -95,13 +113,19 @@
         {
           "command": "demo.sayHello",
           "group": "navigation"
+        },
+        {
+          "command": "demo.getFilePath",
+          "group": "navigation"
         }
       ]
     }
   },
   "activationEvents": [
     "onCommand:demo.helloWorld",
-    "onCommand:demo.sayHello"
+    "onCommand:demo.sayHello",
+    "onCommand:demo.getFilePath",
+    "onCommand:demo.open"
   ],
   "main": "./extension.js",
   "scripts": {
