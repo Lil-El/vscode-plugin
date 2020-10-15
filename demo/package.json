@@ -125,7 +125,9 @@
     "onCommand:demo.helloWorld",
     "onCommand:demo.sayHello",
     "onCommand:demo.getFilePath",
-    "onCommand:demo.open"
+    "onCommand:demo.open",
+    "onLanguage:json",
+    "onLanguage:javascript"
   ],
   "main": "./extension.js",
   "scripts": {
