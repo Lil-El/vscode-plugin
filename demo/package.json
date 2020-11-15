@@ -47,6 +47,10 @@
       {
         "command": "demo.open",
         "title": "YXD:open"
+      },
+      {
+        "command": "demo.openWebview",
+        "title": "打开WebView"
       }
     ],
     "keybindings": [
@@ -97,15 +101,9 @@
       ],
       "explorer/context": [
         {
-          "command": "demo.getCurrentFilePath",
-          "group": "navigation"
-        },
-        {
           "command": "demo.openWebview",
           "group": "navigation"
-        }
-      ],
-      "explorer/context": [
+        },
         {
           "command": "demo.helloWorld",
           "group": "navigation"
@@ -127,7 +125,8 @@
     "onCommand:demo.getFilePath",
     "onCommand:demo.open",
     "onLanguage:json",
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onCommand:demo.openWebview"
   ],
   "main": "./extension.js",
   "scripts": {

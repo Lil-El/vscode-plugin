@@ -17,6 +17,7 @@ function activate(context) {
   hello(context);
   complete(context);
   hover(context);
+  require("./src/webview")(context);
 
   let explorer = vscode.commands.registerCommand("demo.getFilePath", function (
     uri
